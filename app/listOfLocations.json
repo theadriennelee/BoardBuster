@@ -1,0 +1,23 @@
+[
+              {
+                  "name" : "Toronto",
+                  "mapUrl" : "https://maps.google.com/maps?q=University%20of%20Toronto&t=&z=13&ie=UTF8&iwloc=&output=embed",
+                  "address" : "27 King's College Cir, Toronto, ON, M5S 1A1",
+                  "telephone" : "416-555-5555",
+                  "email" : "customerTor@boardbuster.com"
+              },
+              {
+                  "name": "Kingston",
+                  "mapUrl" : "https://maps.google.com/maps?q=Queen's%20University&t=&z=13&ie=UTF8&iwloc=&output=embed",
+                  "address" : "99 University Ave, Kingston, ON, K7L 3N6",
+                  "telephone" : "613-555-5555",
+                  "email" : "customerKin@boardbuster.com"
+              },
+              {
+                  "name": "Montreal",
+                  "mapUrl" : "https://maps.google.com/maps?q=McGill%20University&t=&z=13&ie=UTF8&iwloc=&output=embed",
+                  "address" : "845 Sherbrooke St, Montreal, Quebec H3A 0G4",
+                  "telephone" : "514-555-5555",
+                  "email" : "customerMtl@boardbuster.com"
+              }
+          ]

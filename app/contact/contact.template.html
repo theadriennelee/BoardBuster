@@ -1,0 +1,37 @@
+<div class="">
+    <nav class="navbar navbar-default" role="navigation" style="padding-right:10px;">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="width:120px" href="">Contact</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a class="button navbar-a" style="padding-left: 30px;" href="#!/home">Home</a></li>
+            <li><a class="button navbar-a" style="padding-left: 30px;" href="#!/games">Games</a></li>
+            <li><a class="button navbar-a" style="padding-left: 30px;" href="#!contact">Contact Us</a></li>              
+        </ul>
+    </nav>
+    <section>
+       <h3 class="contact-title">Feel free to come visit us at any of our locations</h3>  
+    </section>
+    <section>
+        <li class="list-li-contacts" ng-repeat="location in listOfLocations">
+            <div class="contact-outer-box">
+                <div class="contact-inner-box">
+                    <h4 class="contact-title">{{location.name}}</h4>
+                    <div style="text-align:center;">
+                        <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 150px">
+                            <iframe src="{{trustSrc(location.mapUrl)}}" frameborder="0"
+                                style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <br/>
+                    <div style="text-align:left; padding-left:10px;">
+                        <p>Address: {{location.address}}</p> 
+                        <p>Telephone: {{location.telephone}}</p>
+                        <p>Email: {{location.email}}</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </section>
+
+</div>

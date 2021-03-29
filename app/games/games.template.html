@@ -1,0 +1,67 @@
+            <div>
+            <nav class="navbar navbar-default" role="navigation" style="padding-right:10px;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="width:120px" href="">Games</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a class="button navbar-a" style="padding-left: 30px;" href="#!/homessss">Home</a></li>
+                    <li><a class="button navbar-a" style="padding-left: 30px;" href="#!/games">Games</a></li>
+                    <li><a class="button navbar-a" style="padding-left: 30px;"href="#!/contact">Contact Us</a></li>        
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="padding-right:25px;">
+                        
+                        <div class="flex-grow-1 d-flex align-middle">
+                            <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded align-middle" style="padding-top: 10px;">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ng-model="searchText">
+                                <button class="btn btn-outline-success" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="padding-right:25px; padding-top:15px;">
+                        <div class="col-auto my-1">
+                            <select class="custom-select mr-sm-2" ng-model="selectedCategory">
+                                <option value="" selected="selected">Choose Type of Game...</option>
+                                <option value="Board Game">Board Games</option>
+                                <option value="Card Game">Card Games</option>
+                                <option value="Word Game">Word Games</option>
+                            </select>
+                </ul>
+
+            </nav>
+            
+            <div class="row" id="searchTextResults">
+                <li class="list-li-games" ng-repeat="game in listOfGames | filter:searchText | filter:selectedCategory">
+                    <div class="column" style="padding:10px;">
+                        <img class="games-image" src={{game.image}} data-toggle="modal" data-target="#id{{$index}}">
+                        <p class="games-text" data-toggle="modal" data-target="#id{{$index}}">{{game.name}}</br></p>
+                    
+                        <!-- Modal -->
+                        <div class="modal fade" id="id{{$index}}" role="dialog">
+                            <div class="modal-dialog">
+                        
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">{{listOfGames[$index].name}}</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="modal-image" src={{game.image}}>
+                                        <p> Game Description: {{listOfGames[$index].description}}</p>
+                                        <p> Type: {{listOfGames[$index].type}}</p>
+                                        <p> Price: {{listOfGames[$index].price}}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="selectedGame($index)">Rent</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </div>
+            </div>

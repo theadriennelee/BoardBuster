@@ -1,0 +1,75 @@
+<div class="">
+  <nav class="navbar navbar-default" role="navigation" style="padding-right:10px;">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="width:120px" href="">BoardBuster</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a class="button navbar-a" style="padding-left: 30px;"href="#!/home">Home</a></li>
+                <li><a class="button navbar-a" style="padding-left: 30px;" href="#!/games">Games</a></li>
+                <li><a class="button navbar-a" style="padding-left: 30px;" href="#!contact">Contact Us</a></li>              
+            </ul>
+        </nav>
+        <section class="container">
+            <h3 style="font-family: Trirong, serif; text-align:center;">{{gameDetails.name}}</h1>
+            <img class="gamedetail-image" src={{gameDetails.image}}>
+            <br/>
+            <p style="text-align:center"> Game Description: {{gameDetails.description}}</p>
+            <p style="text-align:center"> Type: {{gameDetails.type}}</p>
+            <p style="text-align:center"> Price: {{gameDetails.price}}</p>
+            <div class="text-center">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#id{{$index}}">Rent</button>
+            </div>
+      </section>
+      <div class="modal fade" id="id{{$index}}" role="dialog">
+            <div class="modal-dialog">
+        
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">{{gameDetails.name}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="modal-image" src={{gameDetails.image}}>
+                            <br/>
+                            <div>
+                                <div class="container">
+                                    <div class="row">
+                                    <p style="display:inline-block; float:left;">Choose Date:</p>
+                                        <div class='col-sm-3'>
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input type="text" class="form-control" ng-model="selectedDate">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-th"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div>
+                                <p style="display:inline-block;">Choose Location: </p>
+                                <ul style="display:inline-block; padding-left: 10px;">
+                                    <div class="col-auto my-1">
+                                        <select class="custom-select mr-sm-2" ng-model="selectedLocation" required>
+                                            <option value = "">Choose Location</option>
+                                            <option ng-repeat="location in listOfLocations" value="{{location.name}}">{{location.name}}</option>
+                                        </select>
+                                    </div>
+                                </ul>
+                            </div>
+                            </br>
+                            <p>Please note that you may be able to pick up the game by 3pm of your selected date and must return the game by noon the next day.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="rentGame()" type="submit" value="submit" id="btnRent">Rent</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    <form>
+                </div>
+                
+            </div>
+        </div>          
+</div>

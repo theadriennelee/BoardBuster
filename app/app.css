@@ -1,0 +1,126 @@
+body {
+  padding: 0px;
+}
+
+.frame {
+  top: 385px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 670px;
+  margin : 0 0;
+}
+
+.container{
+  width: 100%;
+  height: 50%;
+}
+
+.overlap-title {
+  position: fixed;
+  left:300px;
+  top: 200px;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+  font-family: "Trirong", serif;
+}
+
+.overlap-sub-title {
+  position: fixed;
+  left:50px;
+  right: 150;
+  top: 300px;
+  font-size: 30px;
+  font-family: "Trirong", serif;
+}
+
+.overlap-button {
+  position: fixed;
+  left: 140px;
+  top:500px;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family: "Trirong", serif;
+}
+
+.list-li-games {
+  display: inline;
+  text-align: left;
+  padding-right: 10px;
+  height: 500px;
+}
+
+.list-li-contacts {
+  text-align: left;
+  padding-right: 10px;
+  /* height: 500px; */
+  padding: 10px; 
+  display:inline-block;
+}
+
+.column {
+  float: left;
+  padding: 20px;
+  width: 150px;
+  height: 175px;
+}
+
+.games-image {
+  width:100%; 
+  height:100px; 
+  text-align:center; 
+  padding-left:20px; 
+  padding-right:20px;
+  padding-top:10px;
+}
+
+.games-text {
+  width:100%; 
+  text-align:center;
+}
+
+.modal-image {
+  height:200px; 
+  left: 50%;
+  top: 50%;
+  text-align:center; 
+  padding-left:20px; 
+  padding-right:20px;
+  padding-top:10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal-body > .img-responsive {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-title {
+  font-family: "Trirong", serif;
+  text-align:center;
+}
+
+.contact-outer-box {
+  width:400px; 
+  padding-left: 10px; 
+  float:left;
+}
+
+.contact-inner-box {
+  width:395px; 
+  border-style:solid; 
+  padding-left:10px;
+}
+
+.gamedetail-image {
+    height:250px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alert{
+  display: none;
+}
